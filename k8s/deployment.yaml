@@ -18,4 +18,4 @@ spec:
       - image: gcr.io/$PROJECT_ID/gcpdockerk8s:latest
         name: gcpdockerk8s
         ports:
-        - containerPort: 8080
+        - containerPort: 8888
