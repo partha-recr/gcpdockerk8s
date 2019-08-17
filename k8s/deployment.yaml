@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: mykuctlproject
+  name: mykuctlproject
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: mykuctlproject
+  template:
+    metadata:
+      labels:
+        run: mykuctlproject
+    spec:
+      containers:
+      - image: gcr.io/$PROJECT_ID/mykuctlproject:latest
+        name: mykuctlproject
+        ports:
+        - containerPort: 8080
