@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: gcpdockerk8s
+  name: gcpdockerktl
 spec:
   selector:
-     run: gcpdockerk8s
+     run: gcpdockerktl
   ports:
   - protocol: TCP
     port: 80

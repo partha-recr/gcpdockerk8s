@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: gcpdockerk8s
-  name: gcpdockerk8s
+    run: gcpdockerktl
+  name: gcpdockerktl
 spec:
   replicas: 3
   selector:
     matchLabels:
-      run: gcpdockerk8s
+      run: gcpdockerktl
   template:
     metadata:
       labels:
-        run: gcpdockerk8s
+        run: gcpdockerktl
     spec:
       containers:
-      - image: gcr.io/$PROJECT_ID/gcpdockerk8s:latest
-        name: gcpdockerk8s
+      - image: gcr.io/$PROJECT_ID/gcpdockerktl:latest
+        name: gcpdockerktl
         ports:
         - containerPort: 8080
