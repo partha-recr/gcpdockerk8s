@@ -5,7 +5,7 @@ metadata:
     run: gcpdockerk8s
   name: gcpdockerk8s
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       run: gcpdockerk8s
