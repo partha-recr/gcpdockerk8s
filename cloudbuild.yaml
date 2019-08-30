@@ -4,6 +4,6 @@ steps:
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/gcpdockerktl:tag2','-t', 'gcr.io/$PROJECT_ID/gcpdockerktl:latest', '.']
+    args: ['build','-t', 'gcr.io/$PROJECT_ID/gcpdockerktl:latest', '.']
      
-images: ['gcr.io/$PROJECT_ID/gcpdockerktl:tag2','gcr.io/$PROJECT_ID/gcpdockerktl:latest']
+images: ['gcr.io/$PROJECT_ID/gcpdockerktl:latest']

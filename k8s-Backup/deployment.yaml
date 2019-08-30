@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: gcpdockerktl
+  name: gcpdockerktl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: gcpdockerktl
+  template:
+    metadata:
+      labels:
+        run: gcpdockerktl
+    spec:
+      containers:
+      - image: gcr.io/$PROJECT_ID/gcpdockerktl:latest
+        name: gcpdockerktl
+        ports:
+        - containerPort: 8888
