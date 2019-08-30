@@ -18,12 +18,12 @@ public class GcpcloudbuilddockerApplication {
 		return "Hello From GKE second app";
 	}
 	@GetMapping("/home")
-	public String getMyName() {
+	public String getMyHome() {
 		
 		return "Hello Home GKE second app";
 	}
 	@GetMapping("/test")
-	public String getMyName() {
+	public String getMyTest() {
 		
 		return "Hello Test GKE second app";
 	}
