@@ -9,11 +9,15 @@ steps:
     args: ['apply', '-f', 'k8s/']
     env:
      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+<<<<<<< HEAD
      - 'CLOUDSDK_CONTAINER_CLUSTER=myk8scluster'
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['set','image','deployment','gcpdockerktl', 'gcpdockerktl=gcr.io/$PROJECT_ID/gcpdockerktl:latest']
     env:
      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
      - 'CLOUDSDK_CONTAINER_CLUSTER=myk8scluster'
+=======
+     - 'CLOUDSDK_CONTAINER_CLUSTER=myk8sclusternew'
+>>>>>>> 435b6b541949350ecf2031bf2d93092ebbf8c198
      
 images: ['gcr.io/$PROJECT_ID/gcpdockerktl:latest']
